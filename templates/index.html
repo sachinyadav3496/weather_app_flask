@@ -61,6 +61,9 @@
                                         <br>
                                         <span class="subtitle">{{ weather.temperature }}° F</span>
                                         <br> {{ weather.description }}
+                                        <form>
+                                            <input type="button" value="Details" onclick="window.location.href='/details/{{ weather.city }}'" />
+                                                </form>
                                     </p>
                                 </div>
                             </div>

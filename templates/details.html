@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>details</title>
+</head>
+<body style="background-color: #f5f5f5">
+	<a href="/">home</a>
+<div style=" background-color: #00d1b2">
+	<h1>Weather in  {{ weather.city }}<br>
+	<img src="http://openweathermap.org/img/w/{{ weather.icon }}.png" alt="Image">     
+	{{ weather.temperature }} C<br></h1>
+	<h4>{{ weather.description }}</h4>	
+</div>
+<br>
+<br>
+
+<table border="solid" style="border-collapse: collapse; display: inline-block;"  >
+	<tr>
+		<td style="padding: 15px;">Wind Speed </td>
+		<td style="padding: 15px;">{{ weather.wind_speed }}</td>
+	</tr>
+	<tr>
+		<td style="padding: 15px;">Pressure</td> 
+		<td style="padding: 15px;">{{ weather.pressure }}</td>
+	</tr>
+	<tr>
+		<td style="padding: 15px;"> Humidity</td>
+		<td style="padding: 15px;">{{ weather.humidity }}</td>
+	</tr>
+	<tr>
+		<td style="padding: 15px;">Sunrise</td>
+		<td style="padding: 15px;">{{ weather.sunrise }} </td>
+	</tr>
+	<tr>
+		<td style="padding: 15px;">Sunset</td>
+		<td style="padding: 15px;">{{ weather.sunset }} </td>
+
+	</tr>
+	<tr>
+		<td style="padding: 15px;">Geo Coords:</td>
+		<td style="padding: 15px;">{{ weather.geo_coords }} </td>
+	</tr>
+</table>
+<br>
+<br>
+<div style=" margin-left: 30%;  "><h1>Five Day Forecast</div>
+<div style=" margin-left: 30%; ">
+<table border="solid" style=" table-layout: auto; width: 75%;">
+{% for cell in list1 %}
+
+    <table border="solid 2px" style="border-collapse: collapse; table-layout: auto; width: 75%; " >
+    	<tr >
+        <td>{{ list3[loop.index0] }}</td>
+        <td colspan="3 " ><img src="http://openweathermap.org/img/w/{{ list1[loop.index0] }}.png" alt="Image"> </td>
+        <td>{{ list8[loop.index0] }} C</td>
+        <td>Pressure = {{ list5[loop.index0] }} </td>
+       
+        <td>Humidity = {{ list6[loop.index0] }} </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+    	<td></td>
+    	<td colspan="4"></td>
+    	
+        <td>Clouds = {{ list7[loop.index0] }}% </td>
+          <td> Wind Speed = {{ list4[loop.index0] }}</td>
+
+    </tr>
+
+</table>
+<br>
+<br>
+
+{% endfor %}
+</table>
+</div>
+
+</body>
+</html>
+      
