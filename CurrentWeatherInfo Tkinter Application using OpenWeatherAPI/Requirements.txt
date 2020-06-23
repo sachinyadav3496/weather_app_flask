@@ -1,9 +1,9 @@
 Version Requirements
-python    --> Python 3.7.5
+python --> Python 3.7.5
 
 
-bs4                    --> bs4 0.0.1
-requests          --> requests 2.23.0
-pillow               --> Pillow 7.1.1
-tkinter              --> tkinter 8.6
+bs4 --> bs4 0.0.1
+requests --> requests 2.23.0
+pillow --> Pillow 7.1.1
+tkinter --> tkinter 8.6
 urllib.request --> urllib.request 3.7
